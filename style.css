@@ -1,22 +1,42 @@
-main {
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto';
+body {
+    background-color: #f5f5f5;
 }
 
-.content {
-    width: 400px;
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto';
+    height: 100vh;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (min-width: 501px ) {
+    main {
+        max-width: 500px;
+        width: 100%;
+    }
+}
+
+
+.logo {
+    width: 100%;
 }
 
 img {
-    max-width: 250px;
+    max-width: 60%;
 }
+
 
 h1 {
     font-weight: bold;
@@ -48,12 +68,12 @@ input {
     transition: .2s;
 }
 
-input:focus {
-    border-color: #424242;
-}
-
 input:hover {
     border-color: #bdbdbd;
+}
+
+input:focus {
+    border-color: #424242;
 }
 
 button {
@@ -93,16 +113,47 @@ label {
     justify-content: center;
     align-items: center;
     height: auto;
+    margin-top: 25px;
 }
 
-.checkbox > input {
+#web-version {
     width: auto;
     margin: 0 10px 0 0;
     cursor: pointer;
+    display: none;
+
 }
 
-.checkbox > label {
+#web-version + label {
     font-weight: normal;
     margin: 0;
     cursor: pointer;
+    display: flex;
+    transition: .2s;
 }
+
+#web-version + label::before {
+    content: '';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #9e9e9e;
+    margin-right: 10px;
+    transition: .2s;
+    border-radius: 30%;
+}
+
+#web-version + label:hover::before, #web-version + label:hover {
+    border-color: #acacac;
+    color: #acacac;
+}
+
+#web-version:checked + label::before {
+    content: '✔';
+    border-color: #01e675;
+    color: #01e675;
+}
+

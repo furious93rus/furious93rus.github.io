@@ -15,17 +15,18 @@ function goInteractive() {
     form.addEventListener('blur', (e) => {
         e.preventDefault();
         form.isValid = phone.length === 11
+        form.placeholder = '7XXXXXXXXXX'
+    });
+
+    form.addEventListener('focus', (e) => {
+        e.preventDefault();
+        form.placeholder = ''
     });
 
     submitButton.addEventListener('click', (e) => {
         e.preventDefault();
         document.location.href = `http://${checkbox.checked ? 'web' : 'api'}.whatsapp.com/send?phone=${phone}`
     });
-
-    // checkbox.addEventListener('click', (e) => {
-    //     e.preventDefault();
-    //     useWebVersion =
-    // })
 
 }
 
