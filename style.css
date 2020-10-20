@@ -15,9 +15,14 @@ main {
 }
 
 @media screen and (max-device-width: 500px) {
+    html {
+        font-size: 3.5vw;
+    }
+
     main {
         width: 100%;
         padding: 0 5%;
+
     }
 }
 
@@ -25,6 +30,7 @@ main {
     main {
         max-width: 500px;
         width: 100%;
+        font-size: 16px;
     }
 }
 
@@ -53,18 +59,18 @@ span {
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    margin-top: 25px;
+    margin-top: 1.5625rem; /* 25px */
 }
 
 input {
     width: 100%;
-    height: 50px;
+    height: 3.125rem;
     text-align: center;
-    font-size: 22px;
-    margin-bottom: 25px;
-    border-radius: 5px;
+    font-size: 1.5rem;
+    margin-bottom: 1.5625rem;
+    border-radius: 0.33rem;
     box-shadow: none;
-    border: 2px solid #9e9e9e;
+    border: 0.125rem solid #9e9e9e;
     transition: .2s;
 }
 
@@ -78,12 +84,12 @@ input:focus {
 
 button {
     width: 100%;
-    height: 50px;
+    height: 3.125rem;
 
     background-color: #01e675;
     color: #fff;
     text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: 0.33rem;
     border: none;
     box-shadow: none;
 
@@ -103,7 +109,7 @@ button:disabled {
 
 label {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .checkbox {
@@ -113,12 +119,12 @@ label {
     justify-content: center;
     align-items: center;
     height: auto;
-    margin-top: 25px;
+    margin-top: 1.5625rem;
 }
 
 #web-version {
     width: auto;
-    margin: 0 10px 0 0;
+    margin: 0 0.625rem 0 0;
     cursor: pointer;
     display: none;
 
@@ -138,10 +144,10 @@ label {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    width: 15px;
-    height: 15px;
-    border: 2px solid #9e9e9e;
-    margin-right: 10px;
+    width: 1rem;
+    height: 1rem;
+    border: 0.125rem solid #9e9e9e;
+    margin-right: 0.625rem;
     transition: .2s;
     border-radius: 30%;
 }
