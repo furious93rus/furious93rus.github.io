@@ -14,14 +14,14 @@ main {
     margin: 0 auto;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-device-width: 500px) {
     main {
         width: 100%;
         padding: 0 10px;
     }
 }
 
-@media screen and (min-width: 501px ) {
+@media screen and (min-device-width: 501px ) {
     main {
         max-width: 500px;
         width: 100%;
