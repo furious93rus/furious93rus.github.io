@@ -17,7 +17,7 @@ function goInteractive() {
     form.addEventListener('blur', (e) => {
         e.preventDefault();
         form.placeholder = '7XXXXXXXXXX';
-        form.value.length < 11 ? form.classList.add('hasError') : form.classList.remove('hasError');
+        form.value.length < 11 && !form.value.match(/7\D+/g) ? form.classList.add('hasError') : form.classList.remove('hasError');
     });
 
     form.addEventListener('focus', (e) => {
