@@ -7,9 +7,8 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    align-items: center;
     justify-content: center;
-    font-family: 'Roboto';
+    font-family: 'Roboto', Roboto, serif;
     height: 100vh;
     margin: 0 auto;
 }
@@ -46,7 +45,7 @@ img {
 
 h1 {
     font-weight: bold;
-    font-family: 'Roboto Bk';
+    font-family: 'Roboto Bk', serif;
 }
 
 span {
