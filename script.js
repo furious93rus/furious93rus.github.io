@@ -9,7 +9,7 @@ function goInteractive() {
     form.addEventListener('input', (e) => {
         e.preventDefault();
         form.value.length === 11 ? form.classList.remove('hasError') : '';
-        !form.value.match(/\D+/g) && form.value.length <= 11 ?
+        !form.value.match(/7\D+/g) && form.value.length <= 11 ?
             phone = form.value : form.value = phone;
         submitButton.disabled = phone.length < 11;
     });
