@@ -33,7 +33,13 @@
                 Введите номер телефона:
                 </label>
 
-                <input type="text" name="phone-number" id="phone-number" class="phone-number" placeholder="7XXXXXXXXXX">
+                <div class="input__input">
+                    <input type="text" name="phone-number" id="phone-number" class="phone-number" placeholder="7XXXXXXXXXX">
+
+                    <div class="errorMessage">
+                        Номер телефона должен соответствовать формату 7ХХХХХХХХХХ
+                    </div>
+                </div>
 
                 <button disabled class="button" id="submit-button">Написать сообщение</button>
 

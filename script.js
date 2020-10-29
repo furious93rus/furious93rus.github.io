@@ -8,14 +8,16 @@ function goInteractive() {
 
     form.addEventListener('input', (e) => {
         e.preventDefault();
-        !form.value.match(/\D+/g) && form.value.length <= 11 ? phone = form.value : form.value = phone;
+        form.value.length === 11 ? form.classList.remove('hasError') : '';
+        !form.value.match(/\D+/g) && form.value.length <= 11 ?
+            phone = form.value : form.value = phone;
         submitButton.disabled = phone.length < 11;
     });
 
     form.addEventListener('blur', (e) => {
         e.preventDefault();
-        form.isValid = phone.length === 11
-        form.placeholder = '7XXXXXXXXXX'
+        form.placeholder = '7XXXXXXXXXX';
+        form.value.length < 11 ? form.classList.add('hasError') : form.classList.remove('hasError');
     });
 
     form.addEventListener('focus', (e) => {

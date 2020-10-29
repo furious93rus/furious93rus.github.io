@@ -62,12 +62,25 @@ span {
     margin-top: 1.5625rem; /* 25px */
 }
 
+.input__input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 3.125rem;
+    height: 3.125rem;
+}
+
+.input__input > input {
+    position: absolute;
+    z-index: 2;
+}
+
 input {
     width: 100%;
     height: 3.125rem;
     text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 1.5625rem;
     border-radius: 0.33rem;
     box-shadow: none;
     border: 0.125rem solid #9e9e9e;
@@ -81,6 +94,7 @@ input:hover {
 input:focus {
     border-color: #424242;
 }
+
 
 button {
     width: 100%;
@@ -163,3 +177,33 @@ label {
     color: #01e675;
 }
 
+.errorMessage {
+    color: #e53935;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    transition: .5s;
+
+    position: absolute;
+}
+
+.errorMessage::before {
+    width: 1.5rem;
+    height: 1.5rem;
+    content: '';
+    background-image: url('img/error_ico.svg');
+    background-size: 100%;
+    margin-right: 0.33rem;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.hasError {
+    border-color: #e53935;
+}
+
+.hasError + .errorMessage {
+    transform: translateY(2rem);
+}
