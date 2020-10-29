@@ -203,6 +203,8 @@ label {
     border-color: #e53935;
 }
 
-.hasError + .errorMessage {
+.hasError + .errorMessage,
+.hasError:focus + .errorMessage,
+.hasError:hover + .errorMessage {
     transform: translateY(2rem);
 }
